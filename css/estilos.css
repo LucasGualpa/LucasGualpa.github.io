@@ -9,15 +9,21 @@ body {
 
 }
 
-/* html{scroll-behavior: smooth;} */
+html {
+    scroll-behavior: smooth;
+}
 
 .contenedor {
     width: 100%;
-    margin-top: 3em;
+    margin-top: 5em;
     position: relative;
     right: 15%;
     /* background-color: yellow; */
 
+}
+
+.hr1 {
+    width: 37.5rem;
 }
 
 .headertitulo {
@@ -27,30 +33,58 @@ body {
 }
 
 .minombre {
-    font-size: 1.7rem;
-    letter-spacing: 0.3125em;
+
+    font-size: 5em;
+    letter-spacing: 0.2em;
     line-height: 1em;
 }
 
-#presentacion {
-    font-family: 'Quicksand', sans-serif;
-    letter-spacing: normal;
-    text-indent: -35em;
-    font-size: 1.125em;
-    position: relative;
-    top: 1.25em;
+.minombre h1 {
+    font-size: 50px;
 }
 
-.oficio {
+#presentacion h2 {
+    margin-top: 1em;
+    margin-left: 10%;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: normal;
+    font-size: 24px;
+
+
+
+}
+
+.oficio::before {
     font-family: 'Abel', sans-serif;
-    letter-spacing: 0.1875em;
+
+    content: '';
+    animation: changing 6s linear infinite;
+    /* letter-spacing: 0.1875em;
     line-height: 20%;
-    margin-top: 1.2em;
+    margin-top: 1.2em; */
+}
+
+@keyframes changing {
+    0% {
+        content: 'Tester trainee/junior ';
+    }
+
+    /* 50% {
+        content: 'Programador trainee';
+    } */
+    100% {
+        content: 'Desarrollador web trainee';
+    }
 }
 
 .oficio hr {
     margin-top: 1em;
     border-top: 2px solid black;
+}
+
+.hr1 {
+    margin-top: 1em;
+    border-top: 1px solid black;
 }
 
 .line {
@@ -83,41 +117,40 @@ body {
 
 .redes {
     margin-top: 20px;
+
 }
 
 .redes a {
     text-align: left;
     display: inline-block;
     text-decoration: none;
+    color: black;
 
 }
 
 
 .icon-whatsapp {
     text-align: left;
-    color: black;
     font-size: 4em;
     margin: 0.75rem;
+
 
 }
 
 .icon-facebook2 {
     text-align: left;
-    color: black;
     font-size: 4em;
     margin: 0.75rem;
 }
 
 .icon-github {
     text-align: left;
-    color: black;
     font-size: 4em;
     margin: 0.75rem;
 }
 
 .icon-linkedin2 {
     text-align: left;
-    color: black;
     font-size: 4em;
     margin: 0.75rem;
 }
@@ -126,8 +159,8 @@ body {
     font-family: 'Rajdhani', sans-serif;
     letter-spacing: 4px;
     font-size: 26px;
-    margin-top: 3.125rem;
-    margin-bottom: 3.125rem;
+    margin-top: 3em;
+    margin-bottom: 1em;
 
 }
 
@@ -144,65 +177,96 @@ body {
     /* background-color: aqua; */
 }
 
-.cvpage{
-   
-    position: relative;
-    left: 26em;
+.cvpage {
+
+    text-decoration: none;
     bottom: 5em;
+    margin-top: 4.7em;
+
 }
-.cvpage a{
+
+.cvpage:hover {
+    transform: rotateX(360deg);
+    transition: 1s ease-in;
+
+
+}
+
+
+.cvpage a {
     color: black;
     text-decoration: underline black;
     font-family: 'Franklin Gothic Medium';
     font-size: 22px;
+
 }
 
-.cv hr {
+#hr2 {
+
     position: relative;
-    right: 14%;
-    border-top: 2px solid black;
+    border-top: 1px solid black;
     width: 75rem;
+}
+
+.card {
+    border: 10px solid rgb(22, 22, 22);
+    font-size: 15px;
+    background-color: rgb(22, 22, 22);
+    /* border: none; */
+}
+
+.card:hover {
+
+    transform: scale(1.2);
+    transition: .3s ease-in-out;
+
 
 }
 
-.imgprofile {
-    text-align: right;
+.card h5 {
+    background-color: rgb(22, 22, 22);
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    border-color: rgb(22, 22, 22);
+    ;
+
 }
 
-.imgprofile img {
+.card a {
+    background-color: white;
 
-    width: 33.125rem;
-    height: auto;
-    position: relative;
-    top: -30em;
-    right: 30em;
-    /* background-color: blueviolet; */
 }
 
-.contenedor2 {
-    position: relative;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    top: -25em;
-    /* background-color: yellowgreen; */
+/* .cv hr {
+    /* position: relative; */
+/* right: 14%; */
+/* border-top: 2px solid black; */
+/* width: 75rem; */
+
+/* } */
+.col-sm-4 img {
+
+    bottom: 0;
+    margin-top: 220px;
 }
 
-.info {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 0.625rem;
+.img-fluid {
+    margin-top: 10em;
 
 }
 
 .info a {
-
-    font-size: 12.5rem;
-    margin: 3.125rem;
+    flex: auto;
+    max-width: 100%;
+    width: 675px;
+    font-size: 12em;
+    /* margin: 3.125rem; */
     color: black;
     text-decoration: none;
 }
+
 
 .caja {
     background-color: rgb(248, 248, 248);
@@ -211,34 +275,38 @@ body {
     border-bottom: 3.125rem solid black;
 }
 
-.info span {
-    position: relative;
-    top: 8.5em;
-    right: 9.5em;
-    color: rgb(255, 255, 254);
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .aboutme {
-    height: 40.625rem;
+    height: 80em;
     width: 50%;
     padding: 10%;
     color: black;
-    font-size: 1.625rem;
+    font-size: 1.600rem;
+    margin-top: 5em;
 }
 
 .volver {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    font-size: 5em;
+
+
     position: fixed;
-    top: 52.1875rem;
-    bottom: 0;
-    right: 0;
-    left: 95%;
+    bottom: 50%;
+    top: 90%;
+    left: 75%;
+
+}
+
+.redes a:hover {
+    transform: skew(355deg);
 }
 
 .icon-circle-up {
     color: rgb(77, 77, 77);
-    text-decoration: none;
-    font-size: 5em;
+
 
 }
